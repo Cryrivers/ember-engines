@@ -366,7 +366,7 @@ dist
 │   ├── vendor.css
 │   └── vendor.js
 ├── crossdomain.xml
-├── engines-dist
+├── bundles
 │   └── lazy-engine
 │       ├── assets
 │       │   ├── engine-vendor.css
@@ -401,7 +401,7 @@ definition will be rooted to the engine name.
 
 For example, `/addon/routes/application.js` will result in a JavaScript module
 named `lazy-engine/routes/application` inside of the
-`/dist/engines-dist/lazy-engine/engine.js` file.
+`/dist/bundles/lazy-engine/engine.js` file.
 
 #### `/addon/templates`
 
@@ -410,7 +410,7 @@ Templates will be compiled by your engine but they must include
 
 As an example, `/addon/templates/application.hbs` will result in a JavaScript
 module named `lazy-engine/templates/application` inside of the
-`/dist/engines-dist/lazy-engine/engine.js` file.
+`/dist/bundles/lazy-engine/engine.js` file.
 
 #### `/addon/styles/**/*.css`
 
@@ -448,7 +448,7 @@ DAG/lexicographic order.
 
 Assets appearing in the public folder will appear at the root of the engine
 output with no transformation. For example `/public/public-asset.jpg` appears at
-the root level of the `/dist/engines-dist/lazy-engine/` output folder. Assets in
+the root level of the `/dist/bundles/lazy-engine/` output folder. Assets in
 this folder have no default behavior and you are responsible for any custom
 behavior.
 
@@ -467,7 +467,7 @@ application.
 
 ### Nested Lazy Engines
 
-Nested lazy engines will be promoted to `/dist/engines-dist/` folder in the
+Nested lazy engines will be promoted to `/dist/bundles/` folder in the
 build output. Module deduplication will only be done with the host application.
 
 ## Consuming Engines

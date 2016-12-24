@@ -49,9 +49,9 @@ moduleForAcceptance('Acceptance | lazy routable engine', {
 
 function verifyInitialBlogRoute(assert, loadEvents, application) {
   assert.equal(loadEvents.length, 3, 'loaded 3 assets');
-  assert.deepEqual(loadEvents[0].split(SEPARATORS), [ '', 'engines-dist', 'ember-blog', 'assets', 'engine-vendor.css' ], 'loaded engine vendor css');
-  assert.deepEqual(loadEvents[1].split(SEPARATORS), [ '', 'engines-dist', 'ember-blog', 'assets', 'engine-vendor.js' ], 'loaded engine vendor js');
-  assert.deepEqual(loadEvents[2].split(SEPARATORS), [ '', 'engines-dist', 'ember-blog', 'assets', 'engine.js' ], 'loaded engine js');
+  assert.deepEqual(loadEvents[0].split(SEPARATORS), [ '', 'bundles', 'ember-blog', 'assets', 'engine-vendor.css' ], 'loaded engine vendor css');
+  assert.deepEqual(loadEvents[1].split(SEPARATORS), [ '', 'bundles', 'ember-blog', 'assets', 'engine-vendor.js' ], 'loaded engine vendor js');
+  assert.deepEqual(loadEvents[2].split(SEPARATORS), [ '', 'bundles', 'ember-blog', 'assets', 'engine.js' ], 'loaded engine js');
 
   assert.equal(currentURL(), '/routable-engine-demo/blog/new');
 
